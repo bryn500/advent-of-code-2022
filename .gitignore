@@ -1,0 +1,9 @@
+# custom
+data.txt
+
+# .net
+obj/
+bin/
+.vs/
+*.sln
+BenchmarkDotNet*/
