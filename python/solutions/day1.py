@@ -1,6 +1,7 @@
 def getData(filename):
-    groups = open(filename, "rt").read().split('\n\n')
-    return [sum(map(int, group.split('\n'))) for group in groups] # sum function applied to each in group, that converts each to int first
+    with open(filename, "rt") as file: # close when done (e.g. c# using)
+        groups = file.read().split('\n\n')
+        return [sum(map(int, group.split('\n'))) for group in groups] # sum function applied to each in group, that converts each to int first
 
 def solve(filename):
     data = getData(filename)
